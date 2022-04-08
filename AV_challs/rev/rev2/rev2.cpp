@@ -34,23 +34,23 @@ void ConPanna(){
 void search(int r)
 {
 	cout<<"\n\nWow that is my favourite coffee. \nBut I have these numbers. Maybe this was the thing you were looking for. I have the encoding script, I believe you can decode it yourself.\n";
-			int a[][5]={{118,86,194,230,148},{86,216,212,82,122},{156,86,184,134,124},{136,112,190,160,234}};
-			for(int i=0;i<sizeof(a)/sizeof(a[0]);i++)
+			int a[][6]={{118,86,194,118,186,204},{216,186,212,230,124,200},{88,126,174,148,86,216},{212,82,122,156,88,50 },{174,182,80,202,144,234}};
+			for(int i=0;i<sizeof(a)/sizeof(*(a+i));i++)
 			{
-				for(int j=0;j<sizeof(a[i])/sizeof(a[i][0]);j++)
+				for(int j=0;j<sizeof(*(a+i))/sizeof(*(*(a+i)+0));j++)
 				{
-					cout<<a[i][j]<<" ";
+					cout<<*(*(a+i)+j)<<" ";
 				}
 			}
 			
 			//I used the following script to encde the ASCII values of flag and get the above array.
-//			for(int i=0;i<sizeof(a)/sizeof(a[0]);i++)
+//			for(int i=0;i<sizeof(ascii)/sizeof(ascii[0]);i++)
 //		   {                 
-//		   	for(int j=0;j<sizeof(a[i])/sizeof(a[i][0]);j++)
+//		   	for(int j=0;j<sizeof(ascii[i])/sizeof(ascii[i][0]);j++)
 //		   	{
 //		   		
-//		   		a[i][j]=(a[i][j]/-8)*2;
-//				cout<<(a[i][j])<<" ";
+//		   		ascii[i][j]=(ascii[i][j]/-8)*2;
+//				cout<<(ascii[i][j])<<" ";
 //				   
 //			   }  
 //		   }
@@ -69,7 +69,7 @@ void p4ym()
 
 	if(n==sizeof(c)/sizeof(c[0])-1)
 	{
-		for(int i=0;i<sizeof(ca)/sizeof(ca[0]);i++)
+		for(int i=0;i<sizeof(ca)/sizeof(*(ca+0));i++)
 		{
 			if((c[i]^ca[i]) != 0)
 			{
