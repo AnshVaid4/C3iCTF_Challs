@@ -1,0 +1,22 @@
+Do you want to encrypt? (Y/y N/n): y
+==== Processing speed depends on hardware. Taking larger integer might take longer time in processing. ====
+
+password=2083359
+
+
+Enter message you want to encrypt (0-2222222): 2083359
+
+
+Cipher text:  1993416 
+
+
+Decryption Keys
+Private key:  898223
+Value of n:  2401129
+>>> 
+==================== RESTART: C:/Users/anshv/Desktop/rsa.py ====================
+Do you want to encrypt? (Y/y N/n): n
+Enter cipher: 1993416
+Enter your private key: 898223
+Enter n: 2401129
+Plain text:  2083359
