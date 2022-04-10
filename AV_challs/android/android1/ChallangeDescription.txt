@@ -1,5 +1,5 @@
 Admin has forgot the password of his account. Since the passwords are in encrypted format, he has the following combinations to decrypt
-the cipher and get the password back.
+the cipher and get the password back. Don't try to bruteforce cz the program terminates on wrong credentials.
 
 Cipher text:  2190196 
 Private key:  457481
