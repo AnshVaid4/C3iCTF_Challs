@@ -1,0 +1,58 @@
+apt-get update
+apt-get install vim
+apt-get install apache2
+apt-get install systemctl
+apt-get install gnupg
+apt-get install curl
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch |  apt-key add -
+
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-7.x.list
+apt-get update
+apt install elasticsearch
+
+systemctl daemon-reload
+systemctl enable elasticsearch.service
+service elasticsearch start
+curl http://localhost:9200
+
+
+
+
+#create table users
+curl -X PUT "localhost:9200/users?pretty"
+{
+  "acknowledged" : true,
+  "shards_acknowledged" : true,
+  "index" : "users"
+}
+
+===============================================================
+
+curl -X PUT "http://localhost:9200/users/_doc/1/?pretty" -H 'Content-Type: application/json' -d'             
+{ "uid" : 1,
+        "fname" : "Ramesh",
+        "lname" : "Sharma",
+        "uname" : "rsharma22",
+	"pass"  : "@rs4m_2034",
+        "age" : 23,
+        "isadmin" : "n",
+        "phone" : 9893456723 
+}
+'
+{
+  "_index" : "users",
+  "_type" : "_doc",
+  "_id" : "1",
+  "_version" : 2,
+  "result" : "updated",
+  "_shards" : {
+    "total" : 2,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "_seq_no" : 1,
+  "_primary_term" : 1
+}
+
+
+password=wrestlemania
