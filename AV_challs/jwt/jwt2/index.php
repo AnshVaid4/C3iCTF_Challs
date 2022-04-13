@@ -103,7 +103,6 @@ if($jwt != "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIxIiwidXNlciI6Imd1ZXN
                 $data=base64_decode($arr[1]);
                 echo $data;
                 $id=json_decode($data,true)['uid'];
-                echo $id;
                 $user=json_decode($data,true)['user'];
                 if(($uname=="AdM1NisTr4T0R" and $passwd=="H4rDC0d3dP4Ss_w0rD") or ($id==0 and $user=="admin"))
                 {

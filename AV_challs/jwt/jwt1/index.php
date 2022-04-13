@@ -105,11 +105,7 @@ if($jwt != "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIxIiwidXNlciI6Imd1ZXN
                     $_SESSION['uname'] = "admin";
                     $_SESSION['isadmin'] = 0;
 
-                    echo "
-                        <script>
-                        alert('$username successfully logged in');
-                        </script>
-                    ";
+                    
                     header("Location: flag.php");
                    
                 }
