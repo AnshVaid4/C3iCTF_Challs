@@ -1,22 +1,14 @@
 <?php error_reporting(0); session_start(); session_destroy();   
 
-if (!isset($_COOKIE['utype']))
-{
-setcookie("utype","guest");
-}
-if (!isset($_COOKIE['uid']))
-{
-setcookie("uid",1);
-}
 
-if(isset($_COOKIE['utype']) and isset($_COOKIE['uid']))
-{
-    
+    $uname= htmlspecialchars($_POST['uname']);
+    $passwd=  htmlspecialchars($_POST['passwd']);
+
     // Create token header as a JSON string
     $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
 
     // Create token payload as a JSON string
-    $payload = json_encode(['uid' => $_COOKIE['uid'], 'user' => $_COOKIE['utype']]);
+    $payload = json_encode(['uid' => 1, 'user' => 'guest']);
 
     // Encode Header to Base64Url String
     $base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
@@ -32,15 +24,12 @@ if(isset($_COOKIE['utype']) and isset($_COOKIE['uid']))
 
     // Create JWT
     $jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
-    
-    // echo "<br>$jwt";
 
+    if($jwt!="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIwIiwidXNlciI6ImFkbWluIn0.9bV8G9D0q-PTwuZ-ZyQE1qn-8emcoxh3r9C4D3nGV9w")
+    {
+        echo "<h1>Invalid JWT token found";
+    }
 
-if($jwt != "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIxIiwidXNlciI6Imd1ZXN0In0.S_d1cbrea1Wu-j6VsyOpHHGpfAHw3JzBm2vk_m_UiQ0")
-{
-    echo "<h1></center>Invalid token detected</center></h1>";
-}
-}
 ?>
 <!DOCTYPE html>
 <head>
@@ -69,42 +58,8 @@ if($jwt != "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIxIiwidXNlciI6Imd1ZXN
             {
                
 
-                $token=($_POST['token']);
-                // echo $token;
-                $arr=explode(".",$token);
-                $header=base64_decode($arr[0]);
-                $type=json_decode($header,true)['typ'];
-                $algo=json_decode($header,true)['alg'];
 
-                $data=base64_decode($arr[1]);
-                $id=json_decode($data,true)['uid'];
-                $user=json_decode($data,true)['user'];
-                
-                $header = json_encode(['typ' => $type, 'alg' => $algo]);
-
-                // Create token payload as a JSON string
-                $payload = json_encode(['uid' => $id, 'user' => $user]);
-
-                // Encode Header to Base64Url String
-                $base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
-
-                // Encode Payload to Base64Url String
-                $base64UrlPayload = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($payload));
-
-                // Create Signature Hash
-                $signature = hash_hmac('sha256', $base64UrlHeader . "." . $base64UrlPayload, 'anthony', true);
-
-                // Encode Signature to Base64Url String
-                $base64UrlSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($signature));
-
-                // Create JWT
-                $jwt2 = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
-
-                echo $jwt."</br>".$jwt2;
-
-
-
-                if(($uname=="AdM1NisTr4T0R" and $passwd=="H4rDC0d3dP4Ss_w0rD") or ($jwt === $jwt2))
+                if(($uname=="AdM1NisTr4T0R" and $passwd=="H4rDC0d3dP4Ss_w0rD") or $_POST['token']==="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIwIiwidXNlciI6ImFkbWluIn0.9bV8G9D0q-PTwuZ-ZyQE1qn-8emcoxh3r9C4D3nGV9w")
                 {
                     
                     session_start();
