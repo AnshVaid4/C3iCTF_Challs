@@ -66,11 +66,6 @@
                     $_SESSION['uname'] = "admin";
                     $_SESSION['isadmin'] = 0;
 
-                    echo "
-                        <script>
-                        alert('$username successfully logged in');
-                        </script>
-                    ";
                     header("Location: flag.php");
                    
                 }

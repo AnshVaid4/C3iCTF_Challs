@@ -101,7 +101,6 @@ if($jwt != "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIxIiwidXNlciI6Imd1ZXN
                 // echo $token;
                 $arr=explode(".",$token);
                 $data=base64_decode($arr[1]);
-                echo $data;
                 $id=json_decode($data,true)['uid'];
                 $user=json_decode($data,true)['user'];
                 if(($uname=="AdM1NisTr4T0R" and $passwd=="H4rDC0d3dP4Ss_w0rD") or ($id==0 and $user=="admin"))
@@ -111,11 +110,6 @@ if($jwt != "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIxIiwidXNlciI6Imd1ZXN
                     $_SESSION['uname'] = "admin";
                     $_SESSION['isadmin'] = 0;
 
-                    echo "
-                        <script>
-                        alert('$username successfully logged in');
-                        </script>
-                    ";
                     header("Location: flag.php");
                    
                 }
