@@ -27,7 +27,7 @@
 
     if($jwt!="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIwIiwidXNlciI6ImFkbWluIn0.9bV8G9D0q-PTwuZ-ZyQE1qn-8emcoxh3r9C4D3nGV9w")
     {
-        echo "<h1>Invalid JWT token found";
+        echo "<h1>Invalid JWT token found</h1>";
     }
 
 ?>
