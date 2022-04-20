@@ -1,4 +1,3 @@
-Ghost Ans https://m1m0n.medium.com/egypt-universities-ctf-2019-3f118d4abf72
 1. pcap file.
 2. JPEG Image but, It was Shifted by ROT13 (https://rot13.com/)
 3. RAW Stream To JPEG Image (https://tomeko.net/online_tools/hex_to_file.php?lang=en)
