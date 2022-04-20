@@ -211,7 +211,7 @@ void FlatWhite(){
 void make()
 {
 	char ascii[1][1];
-	string x="I used the following script to encde the ASCII values of flag and get the encoded ASCII values. Find the encoded ASCII and decode them by reversing below code.";
+	cout<<"\nI used the following script to encde the ASCII values of flag and get the encoded ASCII values. Find the encoded ASCII and decode them by reversing below code.";
 			for(int i=0;i<sizeof(ascii)/sizeof(ascii[0]);i++)
 			   {                 
 			   	for(int j=0;j<sizeof(ascii[i])/sizeof(ascii[i][0]);j++)
