@@ -12,5 +12,3 @@
 
 5. Convert that strings to base64decoder and you will get the flag.
 C3iCenter{Y0u_F@U$D_M@LV7SIOUS...}
-
-QzNpQ2VudGVye1kwdV9GQFUkRF9NQExWN1NJT1VTLi4ufQ=
