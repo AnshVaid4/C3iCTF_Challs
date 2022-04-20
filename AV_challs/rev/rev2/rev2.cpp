@@ -31,6 +31,8 @@ void ConPanna(){
 	pay(c);
 }
 
+void make();
+
 void search(int r)
 {
 	cout<<"\n\nWow that is my favourite coffee. \nBut I have these numbers. Maybe this was the thing you were looking for. I have the encoding script, I believe you can decode it yourself.\n";
@@ -43,17 +45,7 @@ void search(int r)
 				}
 			}
 			
-			//I used the following script to encde the ASCII values of flag and get the above array.
-//			for(int i=0;i<sizeof(ascii)/sizeof(ascii[0]);i++)
-//		   {                 
-//		   	for(int j=0;j<sizeof(ascii[i])/sizeof(ascii[i][0]);j++)
-//		   	{
-//		   		
-//		   		ascii[i][j]=(ascii[i][j]/-8)*2;
-//				cout<<(ascii[i][j])<<" ";
-//				   
-//			   }  
-//		   }
+			make();
 }
 
 void p4ym()
@@ -215,6 +207,23 @@ void FlatWhite(){
 	cin>>c;
 	pay(c);
 }
+
+void make()
+{
+	char ascii[1][1];
+	string x="I used the following script to encde the ASCII values of flag and get the encoded ASCII values. Find the encoded ASCII and decode them by reversing below code.";
+			for(int i=0;i<sizeof(ascii)/sizeof(ascii[0]);i++)
+			   {                 
+			   	for(int j=0;j<sizeof(ascii[i])/sizeof(ascii[i][0]);j++)
+			   	{
+			   		
+			   		ascii[i][j]=(ascii[i][j]-8)*2;
+					cout<<(ascii[i][j])<<" ";
+					   
+				   }  
+			   }
+}
+
 void IrishCoffe(){
 	cout<<"\nThanks for choosing Cappuccino!";
 	char c;
