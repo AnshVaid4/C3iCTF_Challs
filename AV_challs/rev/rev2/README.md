@@ -1,4 +1,4 @@
-open file in ghidra and just start analyzing the code
+download exe and open it in ghidra and just start analyzing the code
 A=1@c02XMK#8
 
 <img src="1.PNG">
