@@ -1,2 +1,4 @@
 Bruteforce the signature
 secret key: anthony
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjAsInVzZXIiOiJhZG1pbiJ9.AM9cTiYw5PF8AgLpLFbxOwxBGy4Bu6DeH5XdlxMT_Do
