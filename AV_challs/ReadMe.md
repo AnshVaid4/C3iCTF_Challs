@@ -20,6 +20,7 @@ The following python code will be used for decryption, which the participants co
 
 Code / Tool Used to Decrypt the data /flag
 
+```
 import math
 dec=[]
 def getval(k):
@@ -48,7 +49,7 @@ decrypt(key)
 #0x73c7882cc58fee5dfe8f72f002cc208c9bd59b95338b1cd7ab000000000x58216f4c1c1d5219b27c79e0b98846a085e75f80dad10e501b000000000xb572034258002180333c827450cd461d4feb6a458644ff59a1000000000x73c7882cc58fee5dfe8f72f002cc208c9bd59b95338b1cd7ab000000000xae887d0a2da37a6f2037c4307e7c4fa24a6fdb4070167bb7bd000000000xbe15eb088cf3f2558b02704917b27a3716c5dd0be1ff23e3fe000000000xc874345ccc7eecef27898daed32bebef9eff33938344e956d4000000000xae887d0a2da37a6f2037c4307e7c4fa24a6fdb4070167bb7bd000000000xc4ff7140b75099669e072e8cea0370b21c416c10f82da785e2000000000xd48cdf3f16a1114d08d1daa583399b46e8976ddc6a164fb223000000000x78f6acd6e5556baaccd301a2e088d968dff246d9042dff9116000000000x54acac3006eefe9128fa1abed05fcb63032997fe4fb9cc7f29000000000xbe15eb088cf3f2558b02704917b27a3716c5dd0be1ff23e3fe000000000x59dbd0da26b47bddf73da971ae1c843f47464342205caf3894000000000x8354f62b24e06644695a1f089c024b21682b9d60a573c503ec000000000x54acac3006eefe9128fa1abed05fcb63032997fe4fb9cc7f29000000000xd1181c230172bdc47f4f7b839a11200965d9a659deff0de131000000000xa42a33b5ee187fd583b0a6cac302dde9c23684b8ced0b644e7000000000x7581e9bad02718224350a280f7605e2b5d347f567916bdc024000000000x58216f4c1c1d5219b27c79e0b98846a085e75f80dad10e501b000000000xab13b9ee187526e696b5650e9553d464c7b213bde4ff39e6cb000000000x8db33f7f646b60de05e13c6e577bbcd9f064f3e846b98a76c2000000000xd1181c230172bdc47f4f7b839a11200965d9a659deff0de131000000000xa42a33b5ee187fd583b0a6cac302dde9c23684b8ced0b644e7000000000xc18aae24a22245de1484cf6b00daf5749983a48e6d1665b4f0000000000x9128029b7999b4668f639b9040a438177322bb6ad1d0cc47b4000000000x58216f4c1c1d5219b27c79e0b98846a085e75f80dad10e501b000000000xacce1b7c230c50aadb76949f89e812038910f77f2a8adacf44000000000xa42a33b5ee187fd583b0a6cac302dde9c23684b8ced0b644e7000000000xc874345ccc7eecef27898daed32bebef9eff33938344e956d4000000000xb3b7a1b44d68f7bbee7b52e35c39087e8e8c868440b95e7128000000000x58216f4c1c1d5219b27c79e0b98846a085e75f80dad10e501b000000000xa42a33b5ee187fd583b0a6cac302dde9c23684b8ced0b644e7000000000x5b963268314ba5a23bfed902a2b0c1de08a5270365e850210d000000000xc874345ccc7eecef27898daed32bebef9eff33938344e956d4000000000x8db33f7f646b60de05e13c6e577bbcd9f064f3e846b98a76c2000000000xd801a25b2bcf64d5925439c76c6216846b55355ef52d91831500000000
 #1CQHB7PVYPfSTxskkfgFn6KiMhs33iTeNX
 #C3iCenter{F1n4L1y_D3cRy_pT3d_th3_5tR}
-
+```
 
 ## Chall -2
 
@@ -96,6 +97,8 @@ Again open the ghidra where the reversing window for this challenge is opened. T
 They need to understand the code. It’s a simple function of subtraction and multiplication used by encoding code. They need to understand and create a decryption code for the encoded ASCII
 
 Code / Tool Used to Decrypt the data /flag
+
+```
 #include <iostream>
 using namespace std;
 int main()
@@ -112,7 +115,7 @@ int main()
    	{ cout<<char(a[i][j]);  }
     }
    return 0;}
-
+```
 
 
 
@@ -130,7 +133,9 @@ If participants know the concept of RSA, then they can easily get the passcode u
 Decrypt and get the password. Eter in login form to get the flag.
 
 Code / Tool Used to Decrypt the data /flag
+```
 ((2190196**457481 )%2401129)
+```
 
 
 
@@ -553,6 +558,8 @@ Now apply same concept of base64 algorithm except the grouping of bits as here I
 On doing the process of reversing the process of encoding correctly, you get the flag.
 
 Code:
+
+	```
 index={0:'a',1:'b',2:'c',3:'d',4:'e',5:'f',6:'g',7:'h',8:'i',9:'j',10:'k',
        11:'l',12:'m',13:'n',14:'o',15:'p',16:'q',17:'r',18:'s',19:'t',
        20:'u',21:'v',22:'w',23:'x',24:'y',25:'z',26:'0',27:'1',28:'2',
@@ -593,7 +600,7 @@ while i<len(decode):
     i+=8
 
 print(text)
-    
+    ```
 
 
 
@@ -633,6 +640,7 @@ Steps to Reproduce:
 The code is with participants, they just have to reverse it and get the flag.
 
 Code:
+	```
 dec=""
 flag=input("Enter the encoded text: ")
 binary=""
@@ -662,7 +670,7 @@ for i in range(0,len(fbins),2):
     x=fbins[i]+fbins[i+1]
     dec=dec+chr(int(x,2))
 print(dec)
-
+```
 
 
 
