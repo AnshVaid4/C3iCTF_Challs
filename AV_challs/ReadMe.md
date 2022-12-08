@@ -1,7 +1,7 @@
 
-#CTF-Challenges-Writeups
+# CTF-Challenges-Writeups
 
-#Chall -1 
+## Chall -1 
 
 Chall Name: DecryptMe
 
@@ -50,7 +50,7 @@ decrypt(key)
 #C3iCenter{F1n4L1y_D3cRy_pT3d_th3_5tR}
 
 
-#Chall -2
+## Chall -2
 
 Chall Name: TestYourLuck
 
@@ -77,7 +77,7 @@ Put the exe file in ghidra. The following snippet shows the flag when reversed f
 
 
 
-#Chall -3
+## Chall -3
 
 Chall Name: Coffee
 
@@ -116,7 +116,7 @@ int main()
 
 
 
-#Chall -4
+## Chall -4
 
 Chall Name: Cod3d
 
@@ -159,7 +159,7 @@ Code / Tool Used to Decrypt the data /flag
 
 
 
-#Chall -5
+## Chall -5
 
 Chall Name: BreachMe-1
 
@@ -198,7 +198,7 @@ The flag isvisible.
 
 
 
-#Chall -6
+## Chall -6
 
 Chall Name: Wh0 is th3re?
 
@@ -239,7 +239,7 @@ The flag file is visible ._3461_flag_32445.txt. Use cat command to get flag or d
 
 
 
-#Chall -7
+## Chall -7
 
 Chall Name: BreachMe-2
 
@@ -278,7 +278,7 @@ Base64 Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIwIiwidXNlciI6ImFkb
 
 
 
-#Chall -8
+## Chall -8
 
 Chall Name: BreachMe-3
 
@@ -317,7 +317,7 @@ Submit it to get the flag.
 
 
 
-#Chall -9
+## Chall -9
 
 Chall Name: 4cc3s5 D3ni3d
 
@@ -353,7 +353,7 @@ Use the credentials to login and get the flag
 
 
 
-#Chall -10
+## Chall -10
 
 Chall Name: Giv3 M3 Cr3ds
 
@@ -388,7 +388,7 @@ Access the php code from web browser and get all the file names in the /var/www/
 
 
 
-#Chall -11
+## Chall -11
 
 Chall Name: Inc3pti0n-1
 
@@ -426,7 +426,7 @@ One file is present in /var/log/ directory which is having the flag.
 
 
 
-#Chall -12
+## Chall -12
 
 Chall Name: Inc3pti0n-2
 
@@ -466,7 +466,7 @@ Get the password by cracking the MD5 hash of the password of the user having Y a
 
 
 
-#Chall -13
+## Chall -13
 
 Chall Name: Inc3pti0n-3
 
@@ -504,7 +504,7 @@ Now other part of the flag is present in /usr/lib/sysusers.d/something-flag.txt 
 
 
 
-#Chall -14
+## Chall -14
 
 Chall Name: Clac G0n3 Wr0nG
 
@@ -539,7 +539,7 @@ Find the flag using command find / -name C3i* 2> /dev/null
 
 
 
-#Chall -15
+## Chall -15
 
 Chall Name: Base65
 
@@ -623,7 +623,7 @@ print(text)
 
 
 
-#Chall -16
+## Chall -16
 
 Chall Name: Incepti0nEc0der
 
@@ -667,7 +667,7 @@ print(dec)
 
 
 
-#Chall -17
+## Chall -17
 
 Chall Name: feed3r W/\re
 
