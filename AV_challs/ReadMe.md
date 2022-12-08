@@ -1,7 +1,7 @@
 
-CTF-Challenges-Writeups
+#CTF-Challenges-Writeups
 
-Chall -1 
+#Chall -1 
 
 Chall Name: DecryptMe
 
@@ -50,7 +50,7 @@ decrypt(key)
 #C3iCenter{F1n4L1y_D3cRy_pT3d_th3_5tR}
 
 
-Chall -2
+#Chall -2
 
 Chall Name: TestYourLuck
 
@@ -60,6 +60,7 @@ Steps to Reproduce:
 Put the exe file in ghidra. The following snippet shows the flag when reversed from ghidra in hex format.
 
 
+<img src="snaps/1.png">
 
 
 
@@ -76,8 +77,7 @@ Put the exe file in ghidra. The following snippet shows the flag when reversed f
 
 
 
-
-Chall -3
+#Chall -3
 
 Chall Name: Coffee
 
@@ -87,11 +87,11 @@ Steps to Reproduce:
 If you run the exe then choose the 5th option, press Y button of keyboard to accept the statements. 
 Now it will ask the passkey for the payment. For this you can put the exe in ghidra to reverse engineer.
 The following pic shows the place in ghidra where the passkey is shown in hex. The passkey is: A=1@c02XMK#8
-
+<img src="snaps/2.png">
 
 Now enter the same passkey, which gives you the encoded ASCII of the flag with the statement that it is in encoded and the encoding code is as follows. But it is not visible in the exe. Which gives the hint that there is some encoding code which is not visible but present in the actual code.
 Again open the ghidra where the reversing window for this challenge is opened. The following snap shows the encoding code.
-
+<img src="snaps/3.png">
 
 They need to understand the code. It’s a simple function of subtraction and multiplication used by encoding code. They need to understand and create a decryption code for the encoded ASCII
 
@@ -116,7 +116,7 @@ int main()
 
 
 
-Chall -4
+#Chall -4
 
 Chall Name: Cod3d
 
@@ -159,7 +159,7 @@ Code / Tool Used to Decrypt the data /flag
 
 
 
-Chall -5
+#Chall -5
 
 Chall Name: BreachMe-1
 
@@ -198,7 +198,7 @@ The flag isvisible.
 
 
 
-Chall -6
+#Chall -6
 
 Chall Name: Wh0 is th3re?
 
@@ -239,7 +239,7 @@ The flag file is visible ._3461_flag_32445.txt. Use cat command to get flag or d
 
 
 
-Chall -7
+#Chall -7
 
 Chall Name: BreachMe-2
 
@@ -278,7 +278,7 @@ Base64 Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIwIiwidXNlciI6ImFkb
 
 
 
-Chall -8
+#Chall -8
 
 Chall Name: BreachMe-3
 
@@ -317,7 +317,7 @@ Submit it to get the flag.
 
 
 
-Chall -9
+#Chall -9
 
 Chall Name: 4cc3s5 D3ni3d
 
@@ -353,7 +353,7 @@ Use the credentials to login and get the flag
 
 
 
-Chall -10
+#Chall -10
 
 Chall Name: Giv3 M3 Cr3ds
 
@@ -388,7 +388,7 @@ Access the php code from web browser and get all the file names in the /var/www/
 
 
 
-Chall -11
+#Chall -11
 
 Chall Name: Inc3pti0n-1
 
@@ -426,7 +426,7 @@ One file is present in /var/log/ directory which is having the flag.
 
 
 
-Chall -12
+#Chall -12
 
 Chall Name: Inc3pti0n-2
 
@@ -466,7 +466,7 @@ Get the password by cracking the MD5 hash of the password of the user having Y a
 
 
 
-Chall -13
+#Chall -13
 
 Chall Name: Inc3pti0n-3
 
@@ -504,7 +504,7 @@ Now other part of the flag is present in /usr/lib/sysusers.d/something-flag.txt 
 
 
 
-Chall -14
+#Chall -14
 
 Chall Name: Clac G0n3 Wr0nG
 
@@ -539,7 +539,7 @@ Find the flag using command find / -name C3i* 2> /dev/null
 
 
 
-Chall -15
+#Chall -15
 
 Chall Name: Base65
 
@@ -623,7 +623,7 @@ print(text)
 
 
 
-Chall -16
+#Chall -16
 
 Chall Name: Incepti0nEc0der
 
@@ -667,7 +667,7 @@ print(dec)
 
 
 
-Chall -17
+#Chall -17
 
 Chall Name: feed3r W/\re
 
@@ -685,15 +685,17 @@ A JPG file is also downloaded and opened to show a functionality that it is a ma
 But the icon of software shows as if the python code was written and the exe was created out of it.
 Therefore participants need to decompile the exe file using https://github.com/extremecoders-re/pyinstxtractor. Command for same is 
 -> python pyinstxtractor.py feed3r.exe
-
-
+<img src="snaps/4.png">
+<img src="snaps/5.png">
 
 
 Open the directory to see the bytecode of the python code running behind. The bytecode extension is .pyc.
 There is a file encrypt.pyc file, which seems as if it would have some encryption code. Since it is a bytecode, it won’t be readable easily.
+<img src="snaps/6.png">
 
 Still open it using a notepad, maybe it has something juicy. 
 There are some user readable strings. Try to identify something fishy. The key got exposed in the bytecode of the python code. 
+<img src="snaps/7.png">
 
 Enter the key g_b7Lpl5jfQwKizU0A-tbnNLPz28bH9cRqHHmKi_8Vs= in the software and then the files will get decrypted.
 Therefore the participants get the flag from the flag file created automatically by the software before.
