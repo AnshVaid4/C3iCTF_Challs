@@ -118,7 +118,6 @@ int main()
 ```
 
 
-
 ## Chall -4
 
 Chall Name: Cod3d
@@ -211,9 +210,11 @@ Flag: C3iCenter{jwt_C0mP_c0mm4nD_inJ_3Cti0N_}
 
 Steps to Reproduce: 
 This challenge is based on compromising JWT token where the backend is not verifying the signatures of the token with RCE vulnerability.
-As soon as you search any domain in the input box, a JWT token is assigned to it as exec:<domain name>  in data field of JWT token.
-Just change the data in exec parameter with some RCE bypass method: a && find / -name *flag*  && echo x
+As soon as you search any domain in the input box, a JWT token is assigned to it as exec:\<domain name\>in data field of JWT token.
+Just change the data in exec parameter with some RCE bypass method: a && find / -name **\*flag\***  && echo x
 The flag file is visible ._3461_flag_32445.txt. Use cat command to get flag or directly access it from browser. a && cat  /etc/._3461_flag_32445.txt  && echo x
+
+
 
 
 
@@ -355,9 +356,6 @@ Use the credentials to login and get the flag
 
 
 
-
-
-
 ## Chall -10
 
 Chall Name: Giv3 M3 Cr3ds
@@ -393,6 +391,7 @@ Access the php code from web browser and get all the file names in the /var/www/
 
 
 
+
 ## Chall -11
 
 Chall Name: Inc3pti0n-1
@@ -404,11 +403,13 @@ Use the dirb tool on the website to get all possible files that can be accessed 
 Scan the ports from 0-9999 (as given in challenge description) to see the open ports.
 Enumerate the services running on these ports.
 Port 3306 is opened for ssh.
-Use command ssh guest@<DOMAIN> -p 3306 this asks for a guest password. Use hydra to get the guest password. The password is flemming which is present in rockyou.txt wordlist.
+Use command ssh guest@\<DOMAIN\> -p 3306 this asks for a guest password. Use hydra to get the guest password. The password is flemming which is present in rockyou.txt wordlist.
 Use linpease to discover possible vulnerabilities in the machine. There is a pwn kit vulnerability CVE-2021-4034 discovered by linpease.
 Get the exploit and execute it to do privilege escalation.
-Use command find / -name *flag* 2> /dev/null which will give all the files having the flag keyword in it.
+Use command find / -name \*flag\* 2> /dev/null which will give all the files having the flag keyword in it.
 One file is present in /var/log/ directory which is having the flag.
+
+
 
 
 
@@ -441,12 +442,15 @@ Steps to Reproduce:
 Scan the ports from 10000-19999 (as given in challenge description) to see the open ports.
 Enumerate the services running on these ports.
 There is an elasticsearch service running on 19200 port.
-Access the elasticsearch service from browser using <DOMAIN>:19200 
-Find the databases present in the elasticsearch db using <DOMAIN>:9200/_cat/indices 
+Access the elasticsearch service from browser using \<DOMAIN\>:19200
+Find the databases present in the elasticsearch db using \<DOMAIN\>:9200\/_cat\/indices 
 There is a database named as users.
-Try accessing the database using the <DOMAIN>:9200/users/_search which dumpse the whole database.
+Try accessing the database using the \<DOMAIN\>:9200\/users\/_search which dumps the whole database.
 There is a column which is named as isadmin in JSON. Search for the user which has Y as a value in this column.
 Get the password by cracking the MD5 hash of the password of the user having Y as the value in isadmin column. Use the creds in the login form to get the password.
+
+
+
 
 
 
@@ -509,6 +513,7 @@ Now other part of the flag is present in /usr/lib/sysusers.d/something-flag.txt 
 
 
 
+
 ## Chall -14
 
 Chall Name: Clac G0n3 Wr0nG
@@ -544,6 +549,7 @@ Find the flag using command find / -name C3i* 2> /dev/null
 
 
 
+
 ## Chall -15
 
 Chall Name: Base65
@@ -559,6 +565,7 @@ On doing the process of reversing the process of encoding correctly, you get the
 
 Code:
 
+```
 index={0:'a',1:'b',2:'c',3:'d',4:'e',5:'f',6:'g',7:'h',8:'i',9:'j',10:'k',
        11:'l',12:'m',13:'n',14:'o',15:'p',16:'q',17:'r',18:'s',19:'t',
        20:'u',21:'v',22:'w',23:'x',24:'y',25:'z',26:'0',27:'1',28:'2',
@@ -600,6 +607,7 @@ while i<len(decode):
 
 print(text)
     
+```
 
 
 
@@ -640,6 +648,7 @@ The code is with participants, they just have to reverse it and get the flag.
 
 Code:
 
+```
 dec=""
 flag=input("Enter the encoded text: ")
 binary=""
@@ -669,7 +678,7 @@ for i in range(0,len(fbins),2):
     x=fbins[i]+fbins[i+1]
     dec=dec+chr(int(x,2))
 print(dec)
-
+```
 
 
 
@@ -706,6 +715,7 @@ There are some user readable strings. Try to identify something fishy. The key g
 
 Enter the key g_b7Lpl5jfQwKizU0A-tbnNLPz28bH9cRqHHmKi_8Vs= in the software and then the files will get decrypted.
 Therefore the participants get the flag from the flag file created automatically by the software before.
+
 
 
 
